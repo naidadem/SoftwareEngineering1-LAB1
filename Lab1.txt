@@ -1,0 +1,46 @@
+In this assignment you should model an application that provides transportation services to various types of customers. In the following, we provide detailed description of the application which shall be used for completing the assignment(s).
+
+
+Essentially, the application provides basic and premium transportation services. The basic service includes the following two features: booking a taxi or renting a car. The premium service is a hybrid of the two basic features, where the users are allowed to book a car together with a professional driver that will be at at their disposal anytime during the booking period.
+
+
+To be able to use the services, the users must first create their user profile. For creating a personal profile, the user is obliged to enter their personal information (given name, family name, date of birth, contact and residence information), information about driving license and payment details (credit/debit card). Once the information is provided by the user, the system shall check its validity. If the provided data is correct, the user profile is created; otherwise the action is rejected and appropriate message is displayed. In the following, we describe scenarios that are accessible to users that have successfully logged in using their accounts.
+The first option in the basic service is renting a car, which is available only to the users that have driving license. In order to rent a car, the user shall first enter the start and the end date of the rental period as well as the pick up location of the car. The system then performs a search and as a result generates a list of zero or more cars available at the specified pickup location for the requested period. If no car is available, an appropriate message shall be displayed to the user. In addition to the message, the system shall offer the nearest pickup location to the user that has available cars matching the users criteria.
+
+
+Once a car has been selected from the list of available options, the user specifies the drop off location for the car. Using the provided information, the system calculates the amount to be payed and displays it to the user. When calculating the price, the following two things shall additionally be taken into consideration: i) if the drop-off location is different than the pick up one, additional 5% of the amount is added to the calculated price, and ii) a discount of 10% is given to users who have 10 or more bookings so far. Once all the information has been entered, the user creates a booking entry by pressing the "Book" button. In that case, the system tries to reserve the specified amount from the user's bank account. If the transaction passes, the car is reserved and the user is informed by displaying a message and by sending a confirmation email. In the case when the funds cannot be reserved, the booking fails and the user gets an appropriate message.
+To book a taxi, which is the second option from the basic service, a user is required to specify the pickup location, date, time and the destination. There is no restriction for this feature and all the users are eligible to use it. The system allows taxi booking up to one week in advance. Once the booking information is provided, the system checks the validity of the data to determine whether the information is correct (check the addresses, dates, etc.). If the information is correct, the system calculates the amount to be paid and displays it to the users. The users have option to include tip. In case of an invalid data, an appropriate message is displayed to the users. Once the user agrees to the amount, they press "Book" and the system tries to reserve the specified amount from the user's bank account. If the transaction is approved, the taxi is booked and the user is informed by displaying a message and a confirmation email. In case the transaction fails, no taxi is booked and the user is appropriately informed. 
+
+
+The users are also allowed to modify (which includes cancellation) their bookings for car rental and taxi booking under the following conditions: 1) if the modification is requested at least 72 hours before the booking becomes active no penalties are calculated; 2) if the modification request comes within 24-72 hours before the activation 30% of the amount must be paid by the user. All modifications in the last 24 hours include penalties of 50% of the amount of the booking. 
+The premium service of the application includes renting a car with a personal driver. To use this feature the user has upgrade their account into premium one, by paying a one time fee. The premium users can book a car with a driver which will be at their disposal at any time during the renal period. In order to rent such car, the user just enters the period in which he/she wants to rent a car with driver. The system first checks if a there is a car and a driver available during that period and calculates the price for the user. Users who have used this feature more than 10 times become members of the exclusive Premium Gold Club (PGC). The PGC members are guaranteed to be able to book the service at any time (there must always be a car and a driver for them) and additionally they are able to select the car that will be at their disposal. The cancellation for this service is 15% of the amount for the regular premium users and free of charge for the PGC members.
+
+
+Assignment 1.1
+
+Create a use case diagram for the system described above.
+
+Instructions:
+
+Read the description carefully to identify potential actors and use cases. As a result, you are expected to produce meaningful and well documented use-case diagram with correct usage of the use-case constructs as presented during the lab preparation lecture. In order to pass, you are expected to show understanding of use-case diagrams by fulfilling the below requirements:
+
+Create a use case diagram containing the identified actors and use cases, and the associations between them.
+At least 2 actors (one for basic and one for premium feature) and at least 6 (at least 3 per actor) uses cases should be identified and documented in order to pass this assignment.
+The use case diagram must be documented using the textual template as given in the lab preparation lecture notes. Consequently, an acceptable solution must contain detailed description of the use cases instead of simply providing a use case diagram. 
+The documentation of the use case shall be done in the Astah tool. When you click on a given use case in the left bottom corner of the tool select the "Base" tab and under "Definition" you document it using the template.
+Hints:
+
+This assignment can be solved with a fairly simple use case diagram. In that sense, you should not over-complicate the diagram, but instead focus on the requirements as described above.
+If you have determined any open issue (e.g., misunderstanding, confusion, dependencies, etc.) discuss it with the system owner  (lab assistants) during the lab time.
+Assignment 1.2
+
+Create activity diagrams for one basic and one premium feature..
+
+The diagram should:
+
+Capture the complete work-flow for that particular user
+The diagram shall capture who does what, that is, what are the actions performed by the user, the system and other external systems
+Reporting the assignment
+
+For solving this assignment you should use the Astah tool. The tool can be downloaded from the following location: http://www.astah.net. Both solutions (for Assignment 1.1 and 1.2) shall be submitted as a single Astah file, with the following name: GXX.asta, where XX is the group number.
+Use cases documentation can be done using Astah also. When you click on any created object (i.e., use case, actor or relationship) the tool will view a namespace block on the left side. The namespace contains a definition textbox in which you can document your created object. 
